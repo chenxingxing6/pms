@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.peace.pms.dao.UserDao">
+	
+	<resultMap type="User" id="UserResult">
+		<result property="id" column="id"/>
+		<result property="login_name" column="login_name"/>
+		<result property="password" column="password"/>
+		<result property="email" column="email"/>
+	</resultMap>
+	
+	<select id="login" parameterType="User" resultType="User">
+		select * from user where login_name=#{login_name} and password=#{password}
+	</select>
+	
+	<select id="getall" resultType="User">
+		select * from user
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM user
+		WHERE id=#{id}
+	</delete>
+	
+	<select id="getUserListByCondition" parameterType="User" resultType="User">
+		SELECT *
+		FROM user
+		WHERE login_name = #{login_name}
+	</select>
+</mapper>
