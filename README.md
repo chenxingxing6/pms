@@ -1,8 +1,3 @@
----
-title: SSM对第三方登陆
-date: 2018-03-02 13:25:45
-tags: 学习日志
----
 **SSM对第三方登陆(QQ/微信/Github/微博/开源中国/人人网/豆瓣/百度)进行整合**
  1. QQ : [QQ开发者平台](https://connect.qq.com/) 
  2. 微信： [微信开发者平台](https://open.weixin.qq.com/)  
